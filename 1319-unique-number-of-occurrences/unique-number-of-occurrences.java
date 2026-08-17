@@ -6,11 +6,11 @@ class Solution {
 
         }
         HashSet<Integer> set=new HashSet<>();
-        for(int num:map.keySet()){
-            if(set.contains(map.get(num))){
+        for(int num:map.values()){
+            if(set.contains(num)){
                 return false;
             } 
-            set.add(map.get(num));
+            set.add(num);
 
         }
         return true;
