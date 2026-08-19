@@ -1,0 +1,16 @@
+class Solution {
+    public int[] replaceElements(int[] arr) {
+        for(int i=0;i<arr.length;i++){
+            int maxi=0;
+            for(int j=i+1;j<arr.length;j++){
+                maxi=Math.max(maxi,arr[j]);
+                
+            }
+            arr[i]=maxi;
+
+        }
+        arr[arr.length-1]=-1;
+        return arr;
+        
+    }
+}
