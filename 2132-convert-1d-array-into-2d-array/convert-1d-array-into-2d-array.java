@@ -5,8 +5,13 @@ class Solution {
         if(original.length!=m*n){
             return new int[0][0];
         }
-        for(int i=0;i<original.length;i++){
-            ans[i/n][i%n]=original[i];
+        while(start< original.length){
+            for(int i=0;i<m;i++ ){
+                for(int j=0;j<n;j++){
+                    ans[i][j]=original[start];
+                    start++;
+                }
+            }
         }
         return ans;
         
