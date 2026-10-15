@@ -1,0 +1,34 @@
+
+import java.util.*;
+
+class Solution {
+    public List<Integer> zigzagTraversal(int[][] grid) {
+        List<Integer> result = new ArrayList<>();
+
+        int m = grid.length;
+        int n = grid[0].length;
+        int count = 0;
+
+        for (int i = 0; i < m; i++) {
+            if (i % 2 == 0) {
+                // Traverse left to right
+                for (int j = 0; j < n; j++) {
+                    if (count % 2 == 0) {
+                        result.add(grid[i][j]);
+                    }
+                    count++;
+                }
+            } else {
+                // Traverse right to left
+                for (int j = n - 1; j >= 0; j--) {
+                    if (count % 2 == 0) {
+                        result.add(grid[i][j]);
+                    }
+                    count++;
+                }
+            }
+        }
+
+        return result;
+    }
+}
