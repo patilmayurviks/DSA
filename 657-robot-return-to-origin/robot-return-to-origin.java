@@ -4,7 +4,7 @@ class Solution {
         int countR=0;
         int countU=0;
         int countD=0;
-        for(int count: moves.toCharArray()){
+        for(char count: moves.toCharArray()){
             if(count=='R'){
                 countR++;
             }else if(count=='L'){
