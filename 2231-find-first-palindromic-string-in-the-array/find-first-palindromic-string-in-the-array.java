@@ -1,0 +1,29 @@
+class Solution {
+    public String firstPalindrome(String[] words) {
+        for(int i=0;i<words.length;i++){
+           if( Palindrom(words[i])){
+            return words[i];
+            
+           }
+           
+
+
+        }
+        return "";
+
+        
+    }
+    public Boolean Palindrom(String word){
+        int left=0;
+        int right=word.length()-1;
+        while(left<right){
+            if(word.charAt(left)!=word.charAt(right)){
+                return false;
+
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+}
